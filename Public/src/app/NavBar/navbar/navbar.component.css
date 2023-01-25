@@ -1,0 +1,48 @@
+.dWuXER {
+    position: sticky;
+    z-index: 1;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0.25em 0.25em;
+    margin-bottom: 16px;
+    background: white;
+    top: 50px;
+    padding: 20px 0px 16px;
+}
+
+.htPzWo {
+    overflow-x: scroll;
+}
+
+.htPzWo::-webkit-scrollbar {
+    display: none;
+}
+
+.htPzWo>div {
+    width: fit-content;
+    padding: 8px 12px;
+}
+
+.ijZcyB {
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+}
+
+.htPzWo>div>div>span {
+    display: flex;
+}
+
+.kWUYSv {
+    background: rgb(245, 245, 245);
+    padding: 8px 12px;
+    margin: 0px 4px;
+    font-size: large;
+    border-radius: 10px;
+    max-height: 30px;
+    max-width: 80px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.kWUYSv:hover {
+    background: #f0c229;
+}
