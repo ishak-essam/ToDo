@@ -1,0 +1,56 @@
+<!-- <div class="ion-padding">Scroll the list to see the title collapse.</div>
+
+<ion-list>
+    <ion-item class="ion-padding">
+        <ion-item style="max-width: 300px; padding: 5px;" slot="end">
+            <ion-img src="../../../../assets/Images/Background.PNG"></ion-img>
+        </ion-item>
+        <ion-label class="ion-padding">
+            <h2>Freinds</h2>
+            <p>In Left Kerolles , in middle is Luka</p>
+        </ion-label>
+    </ion-item>
+</ion-list> -->
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="Back"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Items</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-card>
+    <ion-card-header>
+        <ion-card-title>New Items</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-list>
+
+            <ion-item routerLink="item" (click)="Move()">
+                <ion-thumbnail slot="end">
+                    <img alt="new Item" src="../../../../assets/Images/Item2.PNG" />
+                </ion-thumbnail>
+                <ion-label>
+                    <h2>Not Pizza</h2>
+                    <p>
+                        Chicken Fillet Breast topped with cheese, tomatoes and your choice of jalapeños or pepperoni served with fries
+                    </p>
+                    <ion-button class="price" color="primary"> EGP 59 </ion-button>
+                </ion-label>
+            </ion-item>
+            <ion-item routerLink="item" (click)="Move()">
+                <ion-thumbnail slot="end">
+                    <img alt="new Item" src="../../../../assets/Images/Item.PNG" />
+                </ion-thumbnail>
+                <ion-label>
+                    <h2>Not Pizza</h2>
+                    <p>
+                        Chicken Fillet Breast topped with cheese, tomatoes and your choice of jalapeños or pepperoni served with fries
+                    </p>
+                    <ion-button class="price" color="primary"> EGP 59 </ion-button>
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+</ion-card>

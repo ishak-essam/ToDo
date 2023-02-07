@@ -1,0 +1,9 @@
+<ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+    <ion-slide class="ion-padding" padding *ngFor="let Category of Categorys; let i = index" id="{{ i }}">
+        <ion-row>
+            <ion-col>
+                <ion-label>{{ Category }}</ion-label>
+            </ion-col>
+        </ion-row>
+    </ion-slide>
+</ion-slides>

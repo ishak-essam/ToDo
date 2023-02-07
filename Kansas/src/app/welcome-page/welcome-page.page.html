@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-icon class="ion-padding b-gray" name="person" slot="start"></ion-icon>
+        <ion-title style="text-align: center; font-weight: bold">Kansas</ion-title>
+        <ion-icon class="ion-padding b-gray" name="search-outline" slot="end"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+
+<ion-content>
+    <app-header></app-header>
+    <ion-segment scrollable value="Chats" [(ngModel)]="SelectSegment" expand="full" fullscreen (ionChange)="SelectSegmentChanged($event)">
+        <ion-segment-button value="Delivery">
+            <ion-label>Delivery</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Pickup">
+            <ion-label>Pickup</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <div class="ion-padding">
+        <div class="center">
+            <div class="Chats" *ngIf="SelectSegment==='Delivery'">Delivery</div>
+            <div class="Status" *ngIf="SelectSegment==='Pickup'">
+                Loading
+                <ion-spinner name="lines"> </ion-spinner>
+            </div>
+        </div>
+    </div>
+
+    <app-selected></app-selected>
+    <app-item></app-item>
+    <app-item></app-item>
+</ion-content>
+<!-- footer -->
+<ion-footer>
+    <ion-toolbar>
+        <ion-title style="text-align: center; font-weight: bold">Kansas</ion-title>
+    </ion-toolbar>
+</ion-footer>
+<!-- footer -->

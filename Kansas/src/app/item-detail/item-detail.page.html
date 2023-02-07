@@ -1,0 +1,106 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="Back"> </ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img alt="Silhouette of mountains" width="100%" height="25%" src="../../assets/Images/Item.PNG" />
+        <ion-card-header>
+            <ion-card-title>Card Title</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+            <p class="body14_-aK2M" data-testid="product-desc" style="color: rgba(129, 96, 29, 0.65); cursor: default">
+                4 large sandwiches: Club House Buffalo Ranch Classic fillet Mega tasty Served with large soft drink
+            </p>
+        </ion-card-content>
+
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title> Your Choice of Taste </ion-card-title>
+                <ion-card-title slot="end">required</ion-card-title>
+
+                <ion-card-subtitle>Select 1</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-list>
+                    <ion-radio-group val ue="custom-checked">
+                        <ion-item>
+                            <ion-label>Spicy</ion-label>
+                            <ion-radio slot="start" value="Spicy"></ion-radio>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label>Original</ion-label>
+                            <ion-radio slot="start" value="Original"></ion-radio>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label>Chili Lime</ion-label>
+                            <ion-radio slot="start" value="Chili Lime"></ion-radio>
+                        </ion-item>
+                    </ion-radio-group>
+                </ion-list>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>Your Choice Of Soft Drink</ion-card-title>
+                <ion-card-title slot="end">required</ion-card-title>
+
+                <ion-card-subtitle>Select 1</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-list>
+                    <ion-radio-group value="custom-checked">
+                        <ion-item>
+                            <ion-label>Grapes</ion-label>
+                            <ion-radio slot="start" value="grapes"></ion-radio>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label>Strawberries</ion-label>
+                            <ion-radio slot="start" value="strawberries"></ion-radio>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label>Pineapple</ion-label>
+                            <ion-radio slot="start" value="pineapple"></ion-radio>
+                        </ion-item>
+                    </ion-radio-group>
+                </ion-list>
+            </ion-card-content>
+        </ion-card>
+
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>Add-ons</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-list>
+                    <ion-item style="padding: 0px">
+                        <ion-icon *ngIf="quant>0" name="remove-circle" (click)="minus()"></ion-icon>
+                        <p *ngIf="quant>0">{{quant}}</p>
+                        <ion-icon name="add-circle" (click)="plus()"></ion-icon>
+                        <ion-label>Coca Cola can</ion-label>
+                        <ion-label slot="end">EGP 25.00</ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title> Special instructions </ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-textarea [clearOnEdit]="false" placeholder="Add Instructions"></ion-textarea>
+            </ion-card-content>
+        </ion-card>
+    </ion-card>
+    <ion-button expand="block" (click)="actions()">Add to Cart</ion-button>
+</ion-content>
